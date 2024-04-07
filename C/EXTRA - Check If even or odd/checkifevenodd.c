@@ -2,6 +2,7 @@
 #include <string.h>
 
 char *numbers[9] = {"one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
+                  //  0   ,  1  ,    2    ,   3   ,   4   ,   5  ,    6   ,   7    ,   8
 
 int arrayLength = sizeof(numbers)/sizeof(numbers[0]);
 
@@ -9,83 +10,73 @@ int main()
 {
     int a = 0;
     int b = 0;
-    char nA[10];
-    char nB[10];
+    char nA[10] = "";
+    char nB[10] = "";
     
     scanf("%d",&a);
     scanf("%d",&b);
-    
-    
-    //Verifies if A is greater than or short than the array size
-    if(a > arrayLength)
-    {
-       strcpy(nA, numbers[8]);
+
+
+    if(a > 9){
+        printf("%s", numbers[9]);
     }
-    else if(a < arrayLength)
+    else if(a < 1)
     {
-        strcpy(nA, numbers[0]);
+        printf("%s", numbers[0]);
     }
-    
-    
-    
-    //Verifies if B is greater than or short than the array size
-    if(b > arrayLength)
+    else
     {
-        strcpy(nB, numbers[8]);
-    }
-    else if(b < arrayLength)
-    {
-        strcpy(nB, numbers[0]);
-    }
-    
-    
-    
-    //Will check A
-    for(int i = 0; i <= arrayLength; i++)
-    {
-        if(a == i)
+        for(int i = 0; i <= 8; i++)
         {
+           if(a == i)
+           {
             strcpy(nA, numbers[i-1]);
             break;
+           }
         }
     }
     
-    
-    
-    //Will check B
-    for(int j = 0; j <= arrayLength; j++)
+
+
+    if(b > 9){
+        printf("%s", numbers[9]);
+    }
+    else if(b < 1)
     {
-        if(b == j)
+        printf("%s", numbers[0]);
+    }
+    else
+    {
+        for(int j = 0; j <= 8; j++)
         {
-            strcpy(nA, numbers[j-1]);
+            if(b == j)
+            {
+            strcpy(nB, numbers[j-1]);
             break;
+            }
         }
     }
-    
-    
+
+
+
+
+
     printf("%s\n", nA);
     printf("%s\n", nB);
-    
-    
-    //Checks if A is even or odd
-    if(a % 2 != 0)
-    {
+
+    //EVEN OR ODD
+    if(a % 2 == 0){
+        printf("even\n");
+    }
+    else{
         printf("odd\n");
     }
-    else 
-    {
-       printf("even\n");
+
+    if(b % 2 == 0){
+        printf("even\n");
     }
-    
-    
-    //Checks if B is even or odd
-    if(b % 2 != 0)
-    {
+    else{
         printf("odd\n");
-    }
-    else 
-    {
-       printf("even\n");
     }
     
     

@@ -4,7 +4,7 @@
 		{
 			"type": "cppbuild",
 			"label": "C/C++: gcc.exe build active file",
-			"command": "C:\\TDM-GCC-64\\bin\\gcc.exe",
+			"command": "C:\\msys64\\ucrt64\\bin\\gcc.exe",
 			"args": [
 				"-fdiagnostics-color=always",
 				"-g",
@@ -18,8 +18,11 @@
 			"problemMatcher": [
 				"$gcc"
 			],
-			"group": "build",
-			"detail": "compiler: C:\\TDM-GCC-64\\bin\\gcc.exe"
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"detail": "compiler: C:\\msys64\\ucrt64\\bin\\gcc.exe"
 		}
 	]
 }
