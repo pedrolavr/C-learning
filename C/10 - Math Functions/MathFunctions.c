@@ -33,5 +33,6 @@ int main(){
     printf("\n%lf", I);
     printf("\n%lf", L);
 
+    printf("\n%lf", B);
     return 0;
 }
